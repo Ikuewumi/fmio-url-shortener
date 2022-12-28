@@ -1,0 +1,93 @@
+//positions
+$pos: (
+   abs: absolute,
+   rel: relative,
+   fix: fixed,
+   sti: sticky
+);
+
+@each $prop, $value in $pos {
+   .pos-#{$prop} {
+      position: $value;
+   }
+}
+
+
+//displays
+$disp: (
+   block: block,
+   flex: flex,
+   grid: grid,
+   inline: inline,
+   contents: contents
+);
+
+@each $prop, $value in $disp {
+   .dis-#{$prop} {
+      display: $value;
+   }
+}
+
+// alignments (for flex and grid)
+$alignments: (
+   align: (
+      baseline: baseline,
+      strech: strech,
+      center: center,
+      end: end,
+      start: start,
+   ),
+
+   justify: (
+      baseline: baseline,
+      center: center,
+      end: end,
+      start: start,
+      around: space-around,
+      between: space-between,
+      evenly: space-evenly,
+      safe: safe,
+      left: left,
+      right: right  
+   ),
+
+   place: (
+      center: center
+   )
+);
+
+@each $prop, $group in $alignments {
+   @each $gprop, $gvalue in $group {
+      @if $prop == align {
+         .a-#{$gprop} {
+            align-items: $gvalue;
+         }
+         
+         .a-self-#{$gprop} {
+            align-self: $gvalue;
+         }  
+      }
+
+      @if $prop == justify {
+         .j-#{$gprop} {
+            justify-content: $gvalue;
+         }
+         
+         .j-self-#{$gprop} {
+            justify-self: $gvalue;
+         }
+      }
+
+      @if $prop == place {
+         .p-#{$gprop} {
+            place-items: $gvalue;
+         }
+      }
+   }   
+}
+
+@for $i from 1 to 20 {
+   .g-#{$i} {
+      gap: var(--size-#{$i});
+   }
+}

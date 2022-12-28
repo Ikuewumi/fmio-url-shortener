@@ -1,0 +1,93 @@
+@mixin card {
+   padding-inline: var(--pin, 0.4rem);
+   padding-block: var(--pbl, 0.4rem);
+   width: var(--w, 100%);
+   height: var(--h, fit-content);
+   background: var(--bg, transparent);
+   color: var(--clr, #000);
+   fill: var(--fill, #000);
+   border: var(--border-w, 0.2px) var(--border-style, solid) var(--border-color, rgb(0 0 0 / .04));
+   outline: var(--outline, none);
+   font-family: var(--f-sans, 'Work Sans');
+   font-size: var(--size, 0.9rem);
+   line-height: var(--lh, 0.9);
+   border-radius: var(--br, 0.2vmax);
+   transition: var(--transition-time, 0.3s);
+   
+   &:hover {
+      
+      background: var(--bg-h, transparent);
+      fill: var(--fill-h, #000);
+      color: var(--clr-h, #000);
+      border-radius: var(--br-h, 0.2vmax);
+      border: var(--border-w-h, 0.2px) var(--border-style-h, solid) var(--border-color-h, rgb(0 0 0 / .4));
+      
+   }
+}
+
+@mixin input {
+   min-width: var(--w-min, 0);
+   line-height: var(--lh, 1.2);
+
+   &:focus-visible, &:focus {
+      background: var(--bg-h, rgba(61, 126, 146, 0.6));
+      border: var(--border-w-h, 0.1px) solid var(--border-color-h, rgba(0, 0, 0, 0.2));
+      color: var(--clr-h, var(--clr, #ffe));
+   }
+}
+
+@mixin mSvg {
+   background: var(--bg, transparent);
+   fill: var(--f, #000);
+   color: var(--clr, #000);
+   width: var(--w, 100%);
+   height: var(--h, var(--w, 100%));
+   aspect-ratio: var(--aspect, 1);
+   transition: var(--transition-time, 0.3s);
+   
+   &:hover {
+      
+      background: var(--bg-h, transparent);
+      fill: var(--f-h, #000);
+      color: var(--clr-h, #000);
+      
+   }
+}
+
+
+
+@mixin buttons {
+   & {
+      padding: var(--pbl, 0.4em) var(--pin, 1.2em);
+      font-family: var(--f, "Urbanist");
+      font-weight: var(--weight, 600);
+      font-size: var(--size, clamp(0.8em, 0.8em + 1vw, 1.1em));
+      background: var(--bg, rgba(0, 0, 0, 0.02));
+      color: var(--clr, var(--clr, #000));
+      letter-spacing: var(--spacing, 0);
+      border: var(--border-w, 0.1px) solid var(--border-color, rgba(0, 0, 0, 0.2));
+      text-decoration: var(--text-decoration, none);
+      border-radius: var(--br, 0.4vmax);
+      cursor: pointer;
+      transition: 0.2s;
+   }
+   &:hover {
+      background: var(--bg-h, rgba(61, 126, 146, 0.6));
+      border: var(--border-w-h, 0px) solid var(--border-color-h, rgba(0, 0, 0, 0.2));
+      color: var(--clr-h, var(--clr, #ffe));
+   }
+
+   &:focus {
+      outline: var(--outline-w, 0.2px) solid var(--outline-clr, rgb(0 0 0 / 0.05))
+   }
+}
+
+
+@mixin grid-column {
+   display: grid;
+   align-items: normal;
+   justify-content: space-between;
+   gap: var(--g, var(--size-3));
+   grid-auto-flow: column;
+   width: var(--w, 100%);
+}

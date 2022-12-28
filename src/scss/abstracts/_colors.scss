@@ -1,0 +1,29 @@
+$colors: (
+   "red": #ef5350,
+   "pink": #ff5790,
+   "purple": #c35bd5,
+   "blue": #60ace9,
+   "dlue": hsl(240, 100%, 5%),
+   "dblue": hsl(236, 13%, 42%),
+   "gray": hsl(233, 8%, 79%),
+   "green": #67b46a,
+   "yellow": #f7e32e,
+   "orange": #f49509,
+   "light": hsl(36, 100%, 99%)
+);
+
+
+@each $prop, $value in $colors {
+   .bg-#{$prop} {
+      background-color: var(--clr-#{$prop});
+   }
+
+   .c-#{$prop} {
+      color: var(--clr-#{$prop});
+   }
+
+   .f-#{$prop} {
+      fill: var(--clr-#{$prop});
+   }
+}
+

@@ -1,0 +1,70 @@
+.sgrid {
+   --col-count: 3;
+   width: 100vw;
+   display: grid;
+   grid-template-columns: minmax(1rem, 1fr) repeat(var(--col-count, 3), minmax(0, 20rem)) minmax(1rem, 1fr);
+}
+
+
+@supports (grid-template-columns: subgrid) {}
+
+@media (max-width: 700px) {
+   
+   // #app > * > * {
+   //    grid-column: 2 / -2;
+   // }
+
+   .sgrid > * {
+      grid-column: 2 / -2;
+   }
+
+
+}
+
+@media (min-width: 700px) {
+
+   .even-cols > * {
+      grid-column: var(--col-start, 2) / span var(--col-width);
+   }
+
+   .even-cols > *:first-child {
+      grid-column: var(--col-start, 2) / span var(--col-width);
+   }
+
+   .even-cols > *:last-child {
+      grid-column: span var(--col-width) / calc(var(--col-start, 2) * -1);
+   }
+
+   .two-cols {
+      --col-width: calc(var(--col-count) / 2)
+   }
+
+   .three-cols {
+      --col-width: calc(var(--col-count) / 3)
+   }
+
+}
+
+// @media (min-width: 700px) {
+//    .even-cols > * {
+//       grid-column: span var(--col-width);
+//    }
+
+//    .even-cols > *:first-child {
+//       grid-column: var(--col-start, 2) / span var(--col-width);
+//    }
+
+//    .even-cols > *:last-child {
+//       grid-column: span var(--col-width) / calc(var(--col-start, 2) * -1);
+//    }
+
+//    .two-cols {
+//       --col-width: calc(var(--col-count) / 2)
+//    }
+
+//    .three-cols {
+//       --col-width: calc(var(--col-count) / 3)
+//    }
+
+// }
+

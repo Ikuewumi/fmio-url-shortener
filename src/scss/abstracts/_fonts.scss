@@ -1,0 +1,54 @@
+// @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;400;700&family=Work+Sans:ital,wght@0,100;0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap');
+
+
+
+
+$fonts: (
+   sans: "PT Mono",
+   long: "Josefin Sans",
+   poppins: "Poppins",
+   big: "Urbanist",
+   custom: "Inter",
+   mono: "PT Mono",
+   serif: "PT Serif, serif",
+   slab: "Abril Fatface"
+);
+
+@each $prop, $value in $fonts {
+   .f-#{$prop} {
+      font-family: var(--f-#{$prop});
+   }
+}
+
+//weights
+$weights: (
+   thin: 300,
+   normal: 400,
+   mid: 500,
+   bold: 700,
+   "black": 900
+);
+
+@each $prop, $value in $weights {
+   .weight-#{$prop} {
+      font-weight: #{$value};
+   }
+}
+
+//fontfamily
+$font-sizes: (
+   tiny: clamp(0.7rem, 0.7rem + 1vw, 0.9rem),
+   s: clamp(0.8rem, 1rem + 1vw, 1.05rem),
+   s0: clamp(0.9rem, 1.2rem + 2vw, 1.15rem),
+   mid: clamp(1rem, 1rem + 2vw, 1.3rem),
+   s1: clamp(1.4rem, 1.4rem + 2vw, 1.7rem),
+   s2: clamp(1.7rem, 1.7rem + 2vw, 1.9rem),
+   big: clamp(3rem, 3rem + 5vw, 5rem)
+);
+
+@each $prop, $value in $font-sizes {
+   .size-#{$prop} {
+      font-size: var(--f-size-#{$prop});
+   }
+}

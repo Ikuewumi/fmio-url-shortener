@@ -1,0 +1,26 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
+:root {
+   //size
+   @for $i from 1 through 20 {
+      --size-#{$i}: #{$i * 0.2rem};
+   }
+
+   //colors
+   @each $prop, $value in $colors {
+      --clr-#{$prop}: #{$value};
+   }
+
+   //fonts
+   @each $prop, $value in $fonts {
+      --f-#{$prop}: #{$value};
+   }
+
+   //font-sizes
+   @each $prop, $value in $font-sizes {
+      --f-size-#{$prop}: #{$value};
+   }
+
+
+}
