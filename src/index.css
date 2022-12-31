@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#menu-toggle span {
+   transition: 0.5s ease;
+}
+
+header.on #menu-toggle>span:nth-child(1) {
+   transform: rotate(45deg) scaleX(1.35);
+}
+
+header.on #menu-toggle>span:nth-child(2) {
+   transform: scaleX(0);
+}
+
+header.on #menu-toggle>span:nth-child(3) {
+   transform: rotate(-45deg) scaleX(1.35);
+}
+
+
+header #mobile-nav {
+
+   transition: 0.6s ease;
+   visibility: hidden;
+
+}
+
+header.on #mobile-nav {
+
+   opacity: 1;
+   visibility: visible;
+   transform: translateY(100%);
+
+}
