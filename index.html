@@ -94,16 +94,16 @@
 
          <div class="px-3 md:px-0 container w-full mx-auto">
 
-            <div class=" translate-y-[-50%] rounded-lg gap-3 flex flex-col md:flex-row align-middle justify-items-stretch px-4 md:px-7 py-4 md:py-10 bg-veryDarkBlue bg-[url('./images/bg-boost-desktop.svg')] bg-cover bg-no-repeat object-cover">
+            <form id="shorten-form" class=" translate-y-[-50%] rounded-lg gap-3 flex flex-col md:flex-row align-middle justify-items-stretch px-4 md:px-10 py-4 md:py-10 bg-veryDarkBlue bg-[url('../images/bg-boost-desktop.svg')] bg-cover bg-no-repeat object-cover">
                <input type="text" class="grow px-3 py-2 border-2 border-white rounded-md min-w-max focus:rounded-none" placeholder="Shorten a link here">
-               <button class="md:px-7 py-3 md:grow-0 grow font-bold w-full md:w-auto bg-cyan text-white rounded-md">Shorten it!</button>
-            </div>
+               <button class="md:px-7 py-3 md:grow-0 grow font-bold w-full md:w-auto bg-cyan text-white rounded-md" type="submit">Shorten it!</button>
+            </form>
 
 
-            <ul class="list-none w-full md:-mt-14 -mt-12">
+            <ul id="result-list" class="list-none w-full md:-mt-14 -mt-12 grid gap-3">
 
                <li class="bg-white flex flex-col gap-0 md:divide-y-0 md:items-center rounded-lg divide-y divide-gray md:flex-row md:py-3 shadow-lg">
-                  <span class="font-normal md:font-normal md:grow px-4 py-3 md:py-0">https://www.frontendmentor.io</span>
+                  <span class="font-normal md:font-normal md:grow px-4 py-3 md:py-0 word-wrap">https://www.frontendmentor.io</span>
                   <div class="flex flex-col px-4 gap-2 py-3 md:flex-row  md:items-center md:py-0">
                      <span class="text-cyan">https://rel.link/k4lKyk</span>
                      <button class="py-3 md:grow-0 grow font-bold w-full md:px-5 md:py-2 md:w-auto bg-cyan text-white rounded-md">Copy</button>
@@ -128,20 +128,20 @@
          <!-- Card list -->
          <section class="container relative w-full my-9 mx-auto px-3 md:px-0 flex flex-col md:flex-row gap-x-10 gap-y-12">
             <article class="bg-white shadow-sm rounded-lg grid gap-2 px-5 pb-6 md:translate-y-[0%] z-10">
-               <img class="translate-y-[-50%] p-3 bg-veryDarkViolet rounded-[50%]" src="./public/images/icon-brand-recognition.svg" alt="brand-recognition">
+               <img class="translate-y-[-50%] p-3 bg-veryDarkViolet rounded-[50%]" src="/images/icon-brand-recognition.svg" alt="brand-recognition">
                <h4 class="-my-7 font-bold text-lg">Brand Recognotion</h4>
                <p class="text-sm text-darkGray leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos deleniti?</p>
             </article>
 
             <article class="bg-white shadow-sm rounded-lg grid gap-2 px-5 pb-6 md:translate-y-[10%] z-10">
-               <img class="translate-y-[-50%] p-3 bg-veryDarkViolet rounded-[50%]" src="./public/images/icon-detailed-records.svg" alt="brand-recognition">
+               <img class="translate-y-[-50%] p-3 bg-veryDarkViolet rounded-[50%]" src="/images/icon-detailed-records.svg" alt="brand-recognition">
                <h4 class="-my-7 font-bold text-lg">Detailed Records</h4>
                <p class="text-sm text-darkGray leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos deleniti?</p>
             </article>
 
 
             <article class="bg-white shadow-sm rounded-lg grid gap-2 px-5 pb-6 md:translate-y-[20%] z-10">
-               <img class="translate-y-[-50%] p-3 bg-veryDarkViolet rounded-[50%]" src="./public/images/icon-fully-customizable.svg" alt="fully-customizable">
+               <img class="translate-y-[-50%] p-3 bg-veryDarkViolet rounded-[50%]" src="/images/icon-fully-customizable.svg" alt="fully-customizable">
                <h4 class="-my-7 font-bold text-lg">Fully Customizable</h4>
                <p class="text-sm text-darkGray leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos deleniti?</p>
             </article>
@@ -152,7 +152,7 @@
 
 
 
-         <section class=" bg-veryDarkBlue bg-[url('./images/bg-boost-desktop.svg')] bg-cover bg-no-repeat object-cover text-center mt-9">
+         <section class=" bg-veryDarkBlue bg-[url('../images/bg-boost-desktop.svg')] bg-cover bg-no-repeat object-cover text-center mt-9">
             <div class="container w-full mx-auto flex flex-col items-center gap-y-4 px-4 md:px-7 py-10 md:py-20">
             
                <h2 class="text-3xl text-white font-bold">Boost your links today</h2>
@@ -170,7 +170,7 @@
       <footer class="text-white bg-veryDarkViolet py-10">
          <div class="container mx-auto flex-col flex text-center md:text-left gap-y-9 md:flex-row  md:justify-between md:items-start">
             <div class="img max-w-none">
-               <img src="./public/images/logo-light.svg" class="mx-auto" alt="logo">
+               <img src="/images/logo-light.svg" class="mx-auto" alt="logo">
             </div>
             <div class="flex flex-col md:flex-row gap-x-12 gap-y-9">
 
@@ -189,9 +189,9 @@
             </ul>
 
             <ul class="flex flex-row gap-2 md:gap-4 items-center justify-center md:items-start">
-               <img src="./public/images/icon-facebook.svg" alt="facebook">
-               <img src="./public/images/icon-twitter.svg" alt="twitter">
-               <img src="./public/images/icon-pinterest.svg" alt="pinterest">
+               <img src="/images/icon-facebook.svg" alt="facebook">
+               <img src="/images/icon-twitter.svg" alt="twitter">
+               <img src="/images/icon-pinterest.svg" alt="pinterest">
             </ul>
          </div>
 

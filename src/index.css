@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+@media (max-width: 768px) {
+   body {
+      font-size: 14px;
+   }
+}
+
+
+@media (max-width: 500px) {
+   body {
+      font-size: 13px;
+   }
+}
+
+
+
+
 #menu-toggle span {
    transition: 0.5s ease;
 }
